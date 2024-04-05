@@ -12,7 +12,7 @@ const AddUser = () => {
     
         try {
             // Send the form data to the backend API
-            const response = await axios.post('http://localhost:5000/user', data);
+            const response = await axios.post('https://serverside-heliverse.vercel.app/user', data);
             console.log(response.data);
             if(response.data.insertedId){
                 Swal.fire({

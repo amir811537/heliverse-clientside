@@ -5,7 +5,7 @@ const Myteam = () => {
     const [teamData, setTeamData] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/team')
+        axios.get('https://serverside-heliverse.vercel.app/team')
             .then(response => {
                 setTeamData(response.data);
             })

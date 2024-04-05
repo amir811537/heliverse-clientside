@@ -12,7 +12,7 @@ const HomeContent = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.get(`http://localhost:5000/user?page=${currentPage}&limit=${usersPerPage}&name=${data.search}&domain=${data.domain}&gender=${data.gender}`);
+      const response = await axios.get(`https://serverside-heliverse.vercel.app/user?page=${currentPage}&limit=${usersPerPage}&name=${data.search}&domain=${data.domain}&gender=${data.gender}`);
       setUsers(response.data);
     } catch (error) {
       console.log("error in data fetching", error);
@@ -25,7 +25,7 @@ const HomeContent = () => {
 
   const getUsers = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/user?page=${currentPage}&limit=${usersPerPage}`);
+      const response = await axios.get(`https://serverside-heliverse.vercel.app/user?page=${currentPage}&limit=${usersPerPage}`);
       setUsers(response.data);
     } catch (error) {
       console.log("error in data fetching", error);

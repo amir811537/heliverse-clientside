@@ -31,7 +31,7 @@ export default function Cards({ data, refetch }) {
     };
     console.log("================>",teamData)
   
-    axios.post('http://localhost:5000/team', teamData)
+    axios.post('https://serverside-heliverse.vercel.app/team', teamData)
       .then((response) => {
         console.log(response.data);
         // Handle success or display any feedback to the user
@@ -71,7 +71,7 @@ export default function Cards({ data, refetch }) {
       if (result.isConfirmed) {
 
 
-        fetch(`http://localhost:5000/user/${_id}`, {
+        fetch(`https://serverside-heliverse.vercel.app/user/${_id}`, {
           method: "DELETE",
         })
           .then(res => res.json())

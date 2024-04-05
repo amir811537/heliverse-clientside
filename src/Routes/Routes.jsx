@@ -27,7 +27,7 @@ element:<AddUser></AddUser>
             {
                 path:'updateUser/:id',
                 element:<UpdateUser></UpdateUser>,
-                loader:({params})=>fetch(`http://localhost:5000/user/${params.id}`)
+                loader:({params})=>fetch(`https://serverside-heliverse.vercel.app/user/${params.id}`)
             },
             { path: 'myteam',
             element:<Myteam></Myteam>

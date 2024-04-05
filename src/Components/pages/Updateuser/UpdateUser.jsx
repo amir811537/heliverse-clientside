@@ -18,7 +18,7 @@ const UpdateUser = () => {
 
 
 
-        fetch(`http://localhost:5000/user/${_id}`, {
+        fetch(`https://serverside-heliverse.vercel.app/user/${_id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
